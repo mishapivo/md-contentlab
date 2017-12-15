@@ -1,0 +1,7 @@
+Icons utilize Font Awesome
+
+Download from here:
+http://fontawesome.io/
+
+How to Use Font Awesome
+https://axuredesign.wordpress.com/2015/10/27/the-best-way-to-add-font-awesome-to-axure-prototypes-2/

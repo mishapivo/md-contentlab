@@ -1,0 +1,16 @@
+Get started fast.
+
+Download and install Font Awesome
+https://fortawesome.github.io/Font-Awesome/
+
+Check out my guide on how to fully incorporate Font Awesome into your Axure projects.
+https://axuredesign.wordpress.com/2015/10/27/the-best-way-to-add-font-awesome-to-axure-prototypes-2/
+
+_ _ _ _ _
+
+You can also ask me questions on Twitter, I tend to respond very quickly.
+https://twitter.com/AxureThemes
+
+_ _ _ _ _
+
+Happy prototyping!

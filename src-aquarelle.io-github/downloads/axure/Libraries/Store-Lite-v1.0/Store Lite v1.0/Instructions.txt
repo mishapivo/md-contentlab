@@ -1,0 +1,18 @@
+Hello and thank you dear friend! We hope that this product will help you to create even more awesome prototypes with Axure RP.
+
+Into your zip archive you will find 2 root files for Axure: .rp and .rplib
+
+How to use them:
+.rp file it`s basically Template which you can use in your own projects. Template is a complete prototype which you can use as a fundamental base for your own project. Or use just some elements from template for your project. Work with them like with usual Axure file this will allow you to save time and effort. 
+
+
+.rplib file it`s Widget library version of the Template. If template have separated elements, then you can use it like Widget library. Widget library version will allow you to place elements fast and easy just drag and drop. Here is small guide how to set up Widget library to your prototype:
+To load a custom widget library, choose “Load Library” from the dropdown menu in the Widgets pane toolbar and browse to the .rplib file. After loading the library, it will appear in the Widgets panel and you can drag and drop them into the design area as normal.
+To unload a library, choose “Unload library” from the dropdown menu in the Widgets pane toolbar and it will remove the library from the Widgets pane.
+
+
+If you have any questions feel free to ask it to this email: info@axemplate.com
+
+We will be glad to help you.
+
+Cheers!
