@@ -4,6 +4,8 @@
 
 ** 36
 
+https://lifehacker.ru/2017/08/24/markdown/
+
 [ТЕХНОЛОГИИ](https://lifehacker.ru/topics/technology/)
 
 [ДМИТРИЙ САЖКО](https://lifehacker.ru/author/dsazhko/)

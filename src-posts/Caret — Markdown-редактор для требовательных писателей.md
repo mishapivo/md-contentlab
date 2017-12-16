@@ -4,6 +4,8 @@
 
 ** 16
 
+https://lifehacker.ru/2017/07/12/caret/
+
 [MACOS](https://lifehacker.ru/topics/technology/mac-os/) [WINDOWS](https://lifehacker.ru/topics/technology/windows/)
 
 [АРТЁМ КОЗОРИЗ](https://lifehacker.ru/author/32565/)
