@@ -1,22 +1,22 @@
-# Как вставить изображения в Typora - Use Images in Typora
+# Использование изображений в Typora
 
-## Вставка в Markdown Images in Markdown
+## Изображения в Markdown
 
 In markdown, image is written like `![alt](src)`. The `src` here can either be a url like `https://octodex.github.com/images/yaktocat.png`, or an absolute/relative file path, like `../images/test.png`. 
 
-Дополнительные сведения о Image: - More Topics about Image:
+Дополнительные сведения об изображениях:
 
 [TOC]
 
-## How to insert images in Typora
+## Как вставить изображения в Typora
 
-### Вставка в Markdown - Write the Markdown
+### Запись в Markdown - Write the Markdown
 
-You could simply write down the markdown syntax to insert the image. Or click "image" from menubar, or press the shortcut key. When you do this, and meanwhile, if there is an image url in clipboard, then the url will be inserted into the `src` part directly.
+Вы можете просто записать синтаксис разметки, чтобы вставить изображение. Или нажмите «изображение» из меню или нажмите комбинацию клавиш. Когда вы это сделаете, и между тем, если в буфере обмена есть URL-адрес изображения, то URL-адрес будет непосредственно вставлен в `src`.
 
-### Перетаскивания - Drag & Drop
+### Перетаскивания
 
-Of course, there's a easier way — drag & drop, like the screencast below. 
+Конечно, есть более простой способ - перетащить и сбросить, как и скринкаст ниже.
 
 ![drag-img](img/drag-img.gif)
 
@@ -42,19 +42,13 @@ Typora поддерживает вставку данных изображени
 
 Typora поддерживает копирование файлов изображений в данную папку или веб-сервер (требуется [iPic][]) при вставке локальных изображений с помощью перетаскивания или из строки меню. Ниже приведены инструкции по настройке.
 
-Typora support copying image files into given folder or web server (require [iPic][]) when insert local images using drag & drop, or from menu bar. Following are instructions on the set-up.
-
 ### Поведение по умолчанию
 
 По умолчанию, когда вы вставляете или перетаскиваете файл изображения в Typora, мы будем использовать путь к файлу изображения для атрибута `src`.
 
-By default, when you insert or drag & drop a image file into Typora, we will use the path of image file for attribute `src`. 
-
 ### Использовать относительный путь
 
 Если вы включите `Editor` → `Image Insert` →  `Use relative path if possible` в панели настроек, и ваша запись была сохранена в файл, тогда при перетаскивании локального изображения атрибут `src` будет установить как относительный путь к текущему файлу (папке).
-
-If you enable `Editor` → `Image Insert` →  `Use relative path if possible` in preferences panel, and your writing has been saved into a file, then when you drag & drop a local image, the `src` attribute will be set as its relative path to current file (folder).
 
 ### Скопировать файлы изображений в целевую папку при вставке локального изображения
 
@@ -72,49 +66,9 @@ If you enable `Editor` → `Image Insert` →  `Use relative path if possible` i
 
    ![Snip20161117_6](IMG/Snip20161117_6.png)
 
-На шаге 3 новый элемент `typora-copy-images-to: {relative path}` будет вставлен в блок [YAML Front Matter][] текущего документа. Таким образом, вы можете вручную добавить ** свойство typora-copy-images-to ** в YAML Front Matter, чтобы включить это поведение.
+На шаге 3 новый элемент `typora-copy-images-to: {relative path}` будет вставлен в блок [YAML Front Matter][] текущего документа. Таким образом, вы можете вручную добавить **свойство typora-copy-images-to** в YAML Front Matter, чтобы включить это поведение.
 
-После этого, если вы перетащите ** локальные ** изображения или вставьте изображения в Typora, файл изображения будет скопирован в целевой файл и обновлен соответствующий `src`.
-
-> To use this feature, you need to opt-in the option `Allow copy images to given folder` in preferences panel.
-
-One common scenario is to edit `*.md` posts in static sites (like Jekyll) using Typora. For example, if the `.*md` file is put under `_posts` folder while the image files goes into `_media` folder, you may want to copy images files into folder `_media` when you drag/drop or paste images into Markdown file automatically. Here's how:
-
-1. Save your file into some path.
-
-2. Enable `Editor` → `Image Insert` → `Allow copy images to given folder` in preferences panel.
-
-   ![Snip20161117_2](img/Snip20161117_2.png)
-
-3. Select `Edit` → `Image Tools` → `When Insert Local Images` → `Copy Image File to Folder` from menubar, pick the target folder.
-
-   ![Snip20161117_6](img/Snip20161117_6.png)
-
-In step 3, a new item `typora-copy-images-to: {relative path}` will be inserted into the [YAML Front Matter][] block of current document. So you could also manually add **typora-copy-images-to** property in YAML Front Matter to enable this behaviour.
-
-After that, if you drag & drop **local** images or paste images into Typora, the image file will be copied into the target file and update related `src`.
-
-
-
-
-
-> To use this feature, you need to opt-in the option `Allow copy images to given folder` in preferences panel.
-
-One common scenario is to edit `*.md` posts in static sites (like Jekyll) using Typora. For example, if the `.*md` file is put under `_posts` folder while the image files goes into `_media` folder, you may want to copy images files into folder `_media` when you drag/drop or paste images into Markdown file automatically. Here's how:
-
-1. Save your file into some path.
-
-2. Enable `Editor` → `Image Insert` → `Allow copy images to given folder` in preferences panel.
-
-   ![Snip20161117_2](img/Snip20161117_2.png)
-
-3. Select `Edit` → `Image Tools` → `When Insert Local Images` → `Copy Image File to Folder` from menubar, pick the target folder.
-
-   ![Snip20161117_6](img/Snip20161117_6.png)
-
-In step 3, a new item `typora-copy-images-to: {relative path}` will be inserted into the [YAML Front Matter][] block of current document. So you could also manually add **typora-copy-images-to** property in YAML Front Matter to enable this behaviour.
-
-After that, if you drag & drop **local** images or paste images into Typora, the image file will be copied into the target file and update related `src`.
+После этого, если вы перетащите **локальные** изображения или вставьте изображения в Typora, файл изображения будет скопирован в целевой файл и обновлен соответствующий `src`.
 
 ### Upload image file to web server. (macOS only)
 
