@@ -70,7 +70,41 @@ Typora поддерживает копирование файлов изобра
 
 После этого, если вы перетащите **локальные** изображения или вставьте изображения в Typora, файл изображения будет скопирован в целевой файл и обновлен соответствующий `src`.
 
-### Upload image file to web server. (macOS only)
+### Загрузите файл изображения на веб-сервер. (только для macOS)
+
+> ** Требования **: установка macOS ≥ 10.11 и [iPic] []. Кроме того, вам нужно включить `Allow upload to given server` в панели настроек.
+>
+> ** Предупреждение **: По умолчанию iPic будет анонимно загружать изображения на общедоступный веб-сервер, и вы не сможете удалять файлы изображений с этого веб-сервера после его загрузки в него. Поэтому, пожалуйста, настройте iPic заранее, если вы хотите включить эту функцию и управлять всеми загруженными вами файлами изображений.
+
+Вот как включить эту функцию:
+
+1. Установите [iPic] [] и ** config ** соответствующую службу онлайн-изображения.
+2. Включите «Редактор» → «Вставка изображения» → «Разрешить копирование изображений в указанную папку» на панели настроек.
+3. Проверьте элемент «Редактировать» → «Инструменты изображения» → «При вставке локальных изображений» → «Загрузить изображение через iPic» из меню.
+
+На шаге 3 новый элемент `typora-copy-images-to: ipic` будет вставлен в блок [YAML Front Matter] [] текущего документа.
+
+Таким образом, вы также можете вручную добавить ** typora-copy-images-to: ipic ** свойство в YAML Front Matter, чтобы включить это поведение.
+
+Советы. Если вы хотите переместить файл изображения в папку `ipic`, вы должны использовать` typora-copy-images-to:. / Ipic`.
+
+> **Requirements**: macOS ≥ 10.11 and [iPic][] to be installed. Also, you need to enable `Allow upload to given server` in preferences panel.
+>
+> **Warning**: By default, iPic will upload images to a public web server anonymously, and you won't be able to delete image files from that web server once you upload into it. So please config iPic in advance if you want to enable this feature and control all image files you uploaded.
+
+Here's how to enable this function:
+
+1. Install [iPic][] and **config** a proper online image service.
+2. Enable `Editor` → `Image Insert` → `Allow copy images to given folder` in preferences panel.
+3. Check item `Edit` → `Image Tools` → `When Insert Local Images` → `Upload Image via iPic` from menubar.
+
+In step 3, a new item `typora-copy-images-to: ipic` will be inserted into the [YAML Front Matter][] block of current document. 
+
+So you could also manually add **typora-copy-images-to: ipic** property in YAML Front Matter to enable this behaviour.
+
+Tips: If you want to move image file to folder `ipic`, you should use `typora-copy-images-to: ./ipic`.
+
+
 
 > **Requirements**: macOS ≥ 10.11 and [iPic][] to be installed. Also, you need to enable `Allow upload to given server` in preferences panel.
 >
