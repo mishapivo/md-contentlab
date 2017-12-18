@@ -72,63 +72,41 @@ Typora поддерживает копирование файлов изобра
 
 ### Загрузите файл изображения на веб-сервер. (только для macOS)
 
-> ** Требования **: установка macOS ≥ 10.11 и [iPic] []. Кроме того, вам нужно включить `Allow upload to given server` в панели настроек.
+> **Требования**: установка macOS ≥ 10.11 и [iPic][]. Кроме того, вам нужно включить `Allow upload to given server` в панели настроек.
 >
-> ** Предупреждение **: По умолчанию iPic будет анонимно загружать изображения на общедоступный веб-сервер, и вы не сможете удалять файлы изображений с этого веб-сервера после его загрузки в него. Поэтому, пожалуйста, настройте iPic заранее, если вы хотите включить эту функцию и управлять всеми загруженными вами файлами изображений.
+> **Предупреждение**: По умолчанию iPic будет анонимно загружать изображения на общедоступный веб-сервер, и вы не сможете удалять файлы изображений с этого веб-сервера после его загрузки в него. Поэтому, пожалуйста, настройте iPic заранее, если вы хотите включить эту функцию и управлять всеми загруженными вами файлами изображений.
 
 Вот как включить эту функцию:
 
-1. Установите [iPic] [] и ** config ** соответствующую службу онлайн-изображения.
-2. Включите «Редактор» → «Вставка изображения» → «Разрешить копирование изображений в указанную папку» на панели настроек.
-3. Проверьте элемент «Редактировать» → «Инструменты изображения» → «При вставке локальных изображений» → «Загрузить изображение через iPic» из меню.
+1. Установите [iPic][] и **config** соответствующую службу онлайн-изображения.
+2. Включите `Editor` → `Image Insert` → `Allow copy images to given folder` на панели настроек.
+3. Проверьте элемент `Edit` → `Image Tools` → `When Insert Local Images` → `Upload Image via iPic` из меню.
 
-На шаге 3 новый элемент `typora-copy-images-to: ipic` будет вставлен в блок [YAML Front Matter] [] текущего документа.
+На шаге 3 новый элемент `typora-copy-images-to: ipic` будет вставлен в блок [YAML Front Matter][] текущего документа.
 
-Таким образом, вы также можете вручную добавить ** typora-copy-images-to: ipic ** свойство в YAML Front Matter, чтобы включить это поведение.
+Таким образом, вы также можете вручную добавить **typora-copy-images-to: ipic** свойство в YAML Front Matter, чтобы включить это поведение.
 
-Советы. Если вы хотите переместить файл изображения в папку `ipic`, вы должны использовать` typora-copy-images-to:. / Ipic`.
+Советы. Если вы хотите переместить файл изображения в папку `ipic`, вы должны использовать `typora-copy-images-to: ./ipic`.
 
-> **Requirements**: macOS ≥ 10.11 and [iPic][] to be installed. Also, you need to enable `Allow upload to given server` in preferences panel.
->
-> **Warning**: By default, iPic will upload images to a public web server anonymously, and you won't be able to delete image files from that web server once you upload into it. So please config iPic in advance if you want to enable this feature and control all image files you uploaded.
+## Отображение изображений в относительном пути
 
-Here's how to enable this function:
+### Относительный путь к текущему файлу / папке (поведение по умолчанию)
 
-1. Install [iPic][] and **config** a proper online image service.
-2. Enable `Editor` → `Image Insert` → `Allow copy images to given folder` in preferences panel.
-3. Check item `Edit` → `Image Tools` → `When Insert Local Images` → `Upload Image via iPic` from menubar.
+По умолчанию пользователи могут ссылаться на локальное изображение по относительному пути к текущему файлу `*.md` . Например, если файл `*.md` находится в `/User/typora/desktop/test.md`, тогда the `![img](image.png)` будет отображать изображение из `/User/typora/desktop/image.png` как тег `<img>` в HTML. Кроме того, для `../download/image.png`, будет загружено изображение из `/User/typora/download/image.png`.
 
-In step 3, a new item `typora-copy-images-to: ipic` will be inserted into the [YAML Front Matter][] block of current document. 
+### Относительный путь к определенной папке
 
-So you could also manually add **typora-copy-images-to: ipic** property in YAML Front Matter to enable this behaviour.
+Если вы используете уценку для создания веб-сайтов, вы можете указать префикс url для предварительного просмотра изображения на локальном компьютере с свойством `typora-root-url` в YAML Front Matters.
 
-Tips: If you want to move image file to folder `ipic`, you should use `typora-copy-images-to: ./ipic`.
+Например, введите `typora-root-url: / User / Abner / Website / typora.io /` в YAML Front Matters, а затем `! [Alt] (/ blog / img / test.png)` будет рассматриваться как `! [alt] (файл: ///User/Abner/Website/typora.io/blog/img/test.png)` in typora.
+
+В новой версии вместо того, чтобы вручную вводить свойство typora-root-url`, вы можете просто щелкнуть элемент из меню «Редактировать» → «Инструменты изображения» → «Использовать корневой путь изображения», чтобы сообщить Typora создать «typora-root-url» `свойство автоматически.
 
 
 
-> **Requirements**: macOS ≥ 10.11 and [iPic][] to be installed. Also, you need to enable `Allow upload to given server` in preferences panel.
->
-> **Warning**: By default, iPic will upload images to a public web server anonymously, and you won't be able to delete image files from that web server once you upload into it. So please config iPic in advance if you want to enable this feature and control all image files you uploaded.
+***
 
-Here's how to enable this function:
 
-1. Install [iPic][] and **config** a proper online image service.
-2. Enable `Editor` → `Image Insert` → `Allow copy images to given folder` in preferences panel.
-3. Check item `Edit` → `Image Tools` → `When Insert Local Images` → `Upload Image via iPic` from menubar.
-
-In step 3, a new item `typora-copy-images-to: ipic` will be inserted into the [YAML Front Matter][] block of current document. 
-
-So you could also manually add **typora-copy-images-to: ipic** property in YAML Front Matter to enable this behaviour.
-
-Tips: If you want to move image file to folder `ipic`, you should use `typora-copy-images-to: ./ipic`.
-
-## Display images in relative path
-
-### Relative path to current file/folder (default behavior)
-
-By default, users could refer to local image by relative path to current `*.md` file. For example, if the `*.md` file is at `/User/typora/desktop/test.md`, then the `![img](image.png)` will display image from `/User/typora/desktop/image.png` just like the `<img>` tag in HTML. Also, for `../download/image.png`, image from `/User/typora/download/image.png` will be fetched.
-
-### Relative path to certain folder
 
 If you’re using markdown for building websites, you may specify a url prefix for image preview in local computer with property `typora-root-url` in YAML Front Matters. 
 
@@ -136,48 +114,55 @@ For example, input `typora-root-url:/User/Abner/Website/typora.io/` in YAML Fron
 
 In new version, instead of manually input `typora-root-url` property, you could just click item from menubar `Edit` → `Image Tools` → `Use Image Root Path` to tell Typora to generate `typora-root-url` property automatically.
 
-## Upload images to cloud server (macOS only)
+## Загрузка изображений на облачный сервер (только для MacOS)
 
-### Introduction to iPic
+### Введение в iPic
 
 ![ipic](img/ipic.jpg)
+
+[iPic] [] - приложение, которое позволяет загружать локальные изображения в различные облачные сервисы, включая [Imgur] (http://imgur.com/), [Flickr] (https://www.flickr.com/) , [Amazon S3] (https://aws.amazon.com/s3/) и т. Д., И верните вам URL-адрес загруженного изображения для общего доступа. Вы можете найти подробные документы [здесь] (http://toolinbox.net/en/iPic/).
+
+Благодаря интеграции [iPic][] пользователи могут совместно использовать файл разметки другим, не упаковывая локальные изображения вместе с текстовым файлом. Пользователи могут перестать заботиться о том, где размещать локальные изображения или как ссылаться на локальные изображения, используя относительный путь, поскольку они могут просто загружать используемые изображения в облачный сервер.
+
+***
 
 [iPic][] is an app which allows you to upload local images into various cloud service, including  [Imgur](http://imgur.com/), [Flickr](https://www.flickr.com/),[ Amazon S3](https://aws.amazon.com/s3/), etc, and return you a web url of the uploaded image for public access. You could find detailed documents [here](http://toolinbox.net/en/iPic/).
 
 With the integration of [iPic][], users could share markdown file to others without packaging local images along with the plain text file. And users can stop caring about where to put local images or how to refer local images using relative path, since they can simply upload used images into cloud server.
 
-### System requirements and preparation
+### Системные требования и подготовка
 
-1. This feature only supports macOS ≥ 10.11.
-2. Must install latest version of [iPic][].
-3. Configure web server in [iPic][].
+1. Эта функция поддерживает только macOS ≥ 10.11.
+2. Необходимо установить последнюю версию [iPic] [].
+3. Настройте веб-сервер в [iPic][].
 
-### Upload all local images to cloud server
+### Загружать все локальные изображения в облачный сервер
 
-Typora provides a function to upload all local images to cloud server via [iPic][]. To use it, simply, check `Edit` → `Image Tools` → `Upload Local Images via iPic` from menubar and wait for the uploading process to be finished.
+Typora предоставляет функцию загрузки всех локальных изображений на облачный сервер через [iPic][]. Чтобы использовать его, просто выберите `Edit` → `Image Tools` → `Upload Local Images via iPic` из меню и дождитесь завершения процесса загрузки.
 
-### Upload when inserting images
+### Загрузка при вставке изображений
 
-How-tos for this part can be found in section [When insert local image…](#when-insert-local-image…) → Upload image file to web server. (macOS only).
+Инструкции для этой части можно найти в разделе [When insert local image…](#when-insert-local-image…) → Загрузка файла изображения на веб-сервер. (только для MacOS).
 
-## Align images
+## Выравнивание изображений
 
-Currently Typora does not support image alignment. But you could use HTML code like `<center>![img](src)</center>` to align images on exported HTML or PDF.
+В настоящее время Typora не поддерживает выравнивание изображения. Но вы можете использовать HTML-код, например `<center>! [Img] (src) </ center>` для выравнивания изображений на экспортированных HTML или PDF.
 
-Also, by default, if one paragraph only contains one image, it will be center aligned. It is controlled by CSS, and can be reverted by [add custom CSS](http://support.typora.io/Add-Custom-CSS/):
+Кроме того, по умолчанию, если один абзац содержит только одно изображение, он будет выровнен по центру. Он управляется CSS и может быть возвращен [добавить пользовательский CSS](http://support.typora.io/Add-Custom-CSS/):
 
-```css
+```CSS
 p .md-image:only-child{
-    width: auto;
-    text-align: inherit;
+     width: авто;
+     text-align: inherit;
 }
 ```
 
-## Resize images
+
+## Изменение размера изображений
 
 Please check [this link](http://support.typora.io/Resize-Image/).
 
 
 
 [YAML Front Matter]: http://yaml.org/
-[iPic]: https://itunes.apple.com/app/id1101244278?ls=1&amp;amp;mt=12
+[iPic]: https://itunes.apple.com/app/id1101244278?ls=1&amp;amp;amp;mt=12
